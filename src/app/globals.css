@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-main: 80 46 252;
+    --color-background: 240 240 246;
+  }
+
+  body {
+    display: flex;
+    justify-content: center;
+  }
+}
