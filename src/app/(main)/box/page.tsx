@@ -4,7 +4,7 @@ export default function Box() {
   return (
     <>
       <Header />
-      <main className="">Box</main>;
+      <main className="">Box</main>
     </>
   );
 }

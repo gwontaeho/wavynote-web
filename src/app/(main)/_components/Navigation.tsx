@@ -11,7 +11,7 @@ export const Navigation = () => {
       name: "나의노트",
       href: "/main",
       icon: null,
-      matches: ["/folder"],
+      matches: ["/folder", "/write"],
     },
     {
       name: "받은노트",
