@@ -22,6 +22,7 @@ export const Navigation = () => {
       name: "오픈노트",
       href: "/opennote",
       icon: null,
+      matches: ["/search"],
     },
     {
       name: "마이페이지",
