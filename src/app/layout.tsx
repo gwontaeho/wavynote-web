@@ -5,8 +5,8 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Wave note",
-  description: "Wave note",
+    title: "Wave note",
+    description: "Wave note",
 };
 
 /**
@@ -14,17 +14,15 @@ export const metadata: Metadata = {
  * @returns
  */
 export default function RootLayout({
-  children,
+    children,
 }: Readonly<{
-  children: React.ReactNode;
+    children: React.ReactNode;
 }>) {
-  return (
-    <html lang="en">
-      <body className={inter.className}>
-        <div className="min-w-[768px] min-h-screen bg-background">
-          {children}
-        </div>
-      </body>
-    </html>
-  );
+    return (
+        <html lang="ko">
+            <body className={inter.className}>
+                <div className="relative w-full max-w-[768px] min-h-screen bg-background">{children}</div>
+            </body>
+        </html>
+    );
 }
