@@ -1,3 +1,13 @@
+/*
+ *
+ * # Base URL
+ * https://abc-wavynote.koyeb.app/wavynote/v1.0
+ *
+ * # Swagger
+ * https://abc-wavynote.koyeb.app/swagger/index.html
+ *
+ */
+
 import axios from "axios";
 
 // const api = axios.create({ baseURL: "https://abc-wavynote.koyeb.app/wavynote/v1.0" });
