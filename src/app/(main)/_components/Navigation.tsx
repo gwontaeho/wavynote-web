@@ -9,31 +9,35 @@ export const Navigation = () => {
     const list = [
         {
             name: "나의노트",
-            href: "/main",
+            href: "/folder",
             icon: null,
-            matches: ["/folder", "/write"],
+            matches: [],
+            // matches: ["/folder", "/write"],
         },
         {
             name: "받은노트",
             href: "/box",
             icon: null,
+            matches: [],
         },
         {
             name: "오픈노트",
             href: "/opennote",
             icon: null,
-            matches: ["/search"],
+            matches: [],
+            // matches: ["/search"],
         },
         {
             name: "마이페이지",
             href: "/mypage",
             icon: null,
+            matches: [],
         },
     ];
 
     return (
         <nav className="sticky left-0 bottom-0 bg-white rounded-t-[15px] h-[90px] w-full grid grid-cols-4 place-content-center place-items-center">
-            {list.map(({ name, href, matches = [] }) => {
+            {list.map(({ name, href, matches }) => {
                 return (
                     <Link
                         key={href}
