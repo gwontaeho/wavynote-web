@@ -1,10 +1,5 @@
-import { Header } from "../_components/Header";
+import { redirect } from "next/navigation";
 
 export default function Box() {
-  return (
-    <>
-      <Header />
-      <main className="">Box</main>
-    </>
-  );
+    return redirect("/note");
 }

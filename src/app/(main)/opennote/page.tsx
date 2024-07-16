@@ -1,3 +1,3 @@
-export default function Opennote() {
-  return <main className="">opennote</main>;
+export default function Opennotes() {
+    return <main className="">opennotes</main>;
 }
