@@ -36,7 +36,7 @@ export const Navigation = () => {
     ];
 
     return (
-        <nav className="sticky left-0 bottom-0 bg-white rounded-t-[15px] h-[90px] w-full grid grid-cols-4 place-content-center place-items-center">
+        <nav>
             {list.map(({ name, href, matches }) => {
                 return (
                     <Link
