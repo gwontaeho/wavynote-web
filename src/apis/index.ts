@@ -10,6 +10,8 @@
 
 import axios from "axios";
 
+const AUTHORIZATION = "Basic d2F2eW5vdGU6d2F2eTIwMjMwOTE0";
+
 // const api = axios.create({ baseURL: "https://abc-wavynote.koyeb.app/wavynote/v1.0" });
 const api = axios.create({ baseURL: "http://localhost:3001" });
 
