@@ -13,10 +13,6 @@
     justify-content: center;
   }
 
-
-  /* nav icon active */
-  .menu-icon{ fill: red;}
-
-  .active-menu{color: #040113;}
-  .active-menu svg{fill: #C6C6D0;}
+  h2{@apply text-lg;}
+  h3{@apply text-lg;}
 }
