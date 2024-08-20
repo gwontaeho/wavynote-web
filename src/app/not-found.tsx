@@ -10,7 +10,7 @@ export default function NotFound() {
       <Image
         src="/images/not-found.svg"
         alt="not-found"
-        width="113"
+        width={113}
         height="88"
         priority
       />
