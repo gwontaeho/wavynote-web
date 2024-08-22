@@ -15,7 +15,7 @@ export default function Folder() {
       ];
 
     return <main className="">
-        <Header title="폴더" buttonText=""></Header>
+        <Header title="폴더" buttonText="" icBtnType={undefined}></Header>
         <section className="content-wrap bgScroll">
           <ul className="folderWrap">
             <li className="folderMin add-folder">

@@ -1,4 +1,4 @@
-type ButtonType = "prev" | "search" | "searchBlack" | "etc";
+type ButtonType = "prev" | "search" | "searchBlack" | "etc" | undefined | null;
 
 interface ButtonProps {
   name: string;
