@@ -10,10 +10,21 @@
 
 import axios from "axios";
 
+// const BASE_URL = "http://localhost:3001";
+// const BASE_URL = "https://abc-wavynote.koyeb.app/wavynote/v1.0";
+const BASE_URL = "/api";
 const AUTHORIZATION = "Basic d2F2eW5vdGU6d2F2eTIwMjMwOTE0";
 
-// const api = axios.create({ baseURL: "https://abc-wavynote.koyeb.app/wavynote/v1.0" });
-const api = axios.create({ baseURL: "http://localhost:3001" });
+const api = axios.create({ baseURL: BASE_URL });
+api.interceptors.request.use(
+    (config) => {
+        config.headers.Authorization = AUTHORIZATION;
+        return config;
+    },
+    (error) => {
+        return Promise.reject(error);
+    }
+);
 
 /*******************************************************/
 
@@ -57,7 +68,9 @@ const getBox = () => {};
 /**
  * @description Get open-note list
  */
-const getOpennotes = () => {};
+export const getOpennotes = () => {
+    return api.get(`/opennote/list?uid=chelseafandev@gmail.com`);
+};
 
 /**
  * @description Get open-note detail
@@ -73,9 +86,19 @@ const getOpennoteSearches = () => {};
 
 /**
  * GET
- * @description Get folder list
+ * @description 폴더 목록 조회
  */
-const getFolders = () => {};
+export const getFolders = () => {
+    return api.get(`/main/folderlist?id=wavynoteadmin@gmail.com`);
+};
+
+/**
+ * GET
+ * @description 노트 목록 조회
+ */
+export const getNotes = ({ uid, fid }: { uid: string; fid: string }) => {
+    return api.get(`/main/notelist?uid=wavynoteadmin@gmail.com&fid=${fid}`);
+};
 
 /**
  * GET
@@ -97,9 +120,11 @@ const getFoldersSearches = () => {};
 
 /**
  * POST
- * @description Create folder
+ * @description 폴더 생성
  */
-const createFolder = () => {};
+export const createFolder = async (data: any) => {
+    return api.post("/main/folder", data);
+};
 
 /**
  * DELETE
@@ -115,4 +140,10 @@ const updateFolder = () => {};
 
 /*******************************************************/
 
-export default api;
+/**
+ * POST
+ * @description 노트 생성
+ */
+export const createNote = (data: any) => {
+    return api.post("/write/save", data);
+};
