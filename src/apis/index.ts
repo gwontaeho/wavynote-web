@@ -16,6 +16,8 @@ const BASE_URL = "/api";
 const AUTHORIZATION = "Basic d2F2eW5vdGU6d2F2eTIwMjMwOTE0";
 
 const api = axios.create({ baseURL: BASE_URL });
+
+/** 임시 */
 api.interceptors.request.use(
     (config) => {
         config.headers.Authorization = AUTHORIZATION;
@@ -31,17 +33,23 @@ api.interceptors.request.use(
 /**
  *
  */
-const signin = () => {};
+export const signin = (data: any) => {
+    return api.post("/profile/signin", data);
+};
 
 /**
  *
  */
-const signup = () => {};
+export const signup = (data: any) => {
+    return api.post("/profile/signup", data);
+};
 
 /**
  *
  */
-const duplicate = () => {};
+export const duplicate = (id: string) => {
+    return api.get(`/profile/duplicate?id=${id}`);
+};
 
 /*******************************************************/
 
@@ -49,7 +57,9 @@ const duplicate = () => {};
  * GET
  * @description Get conversations
  */
-const getConversations = () => {};
+export const getConversations = (id: string) => {
+    return api.get(`/box/conversationlist?id=${id}`);
+};
 
 /**
  * GET
@@ -88,7 +98,7 @@ const getOpennoteSearches = () => {};
  * GET
  * @description 폴더 목록 조회
  */
-export const getFolders = () => {
+export const getFolders = ({ id }: { id: string }) => {
     return api.get(`/main/folderlist?id=wavynoteadmin@gmail.com`);
 };
 
